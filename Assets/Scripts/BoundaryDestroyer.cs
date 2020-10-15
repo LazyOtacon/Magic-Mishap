@@ -6,7 +6,10 @@ public class BoundaryDestroyer : MonoBehaviour
 {
     void OnTriggerExit2D(Collider2D other)
     {
-        // Destroy the other object
-        Destroy(other.gameObject);
+        // Destroy the other object if it is not the player
+        if (!(other.gameObject.CompareTag("Player")))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
