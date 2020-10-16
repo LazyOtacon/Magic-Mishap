@@ -27,7 +27,7 @@ public class DestroyByContact : MonoBehaviour
 
         // Delete the "other" object
         // Delete this object
-        // Destroy(other.gameObject);
+        Destroy(other.gameObject);
         Destroy(this.gameObject);
     }
 }

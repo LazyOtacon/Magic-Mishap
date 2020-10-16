@@ -57,4 +57,13 @@ public class PlayerController : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRadius, whatIsGround);
     }
+
+    // Detect when the enemy collides with the player
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
